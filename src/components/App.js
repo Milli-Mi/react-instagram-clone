@@ -1,6 +1,6 @@
  import React, { Component } from 'react';
  import Post from './Post'
- import images from '../images/kot-cobi.jpg';
+ import images from '../images/kot-cobi.jpg'
  import profileImg from '../images/profile.jpg'
  
  
