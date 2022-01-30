@@ -13,12 +13,14 @@
          profileSrc: profileImg
         
      }; 
-     return (<Post post={post} />
- 
-    ) 
+     return (
+         <div className="container grid grid-cols-12">
+             <Post post={post} />
+         </div>
+     ); 
    } 
  }
 
 
-23.12 40min
+ 
  

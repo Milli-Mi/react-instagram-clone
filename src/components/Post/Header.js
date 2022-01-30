@@ -3,9 +3,15 @@ import React from 'react';
 export default function Header({username, profileSrc}) {
      
     return (
-        <a href='#'>
-            <img src={profileSrc} alt={username}   />
-            <p>{username}</p>
-        </a>
+        <div className="p-4">
+            <a href='#' className='flex items-center mr-3'>
+                <img
+                    src={profileSrc}
+                    alt={username}
+                    className='w-8 h-8 object-cover rounded-full'
+                />
+                <p className='font-bold'>{username}</p>
+            </a>
+        </div>
     );
 }
