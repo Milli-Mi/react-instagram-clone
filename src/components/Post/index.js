@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Image from './Image'
-import Header from './Header'                                   
+import Header from './Header' 
+import Actions from './Actions'                                  
 export default class Post extends Component {
     render() {
         const { post } = this.props;
         return (
-            <div className="border rounded border-black col-start-3 col-end-9">
+            <div className="border rounded border-gray-200 col-start-4 col-end-10">
                 <Header username={post.username} profileSrc={post.profileSrc} />
                 <Image src={post.src} caption={post.caption} />
+                <Actions />
             </div>
         );
     }

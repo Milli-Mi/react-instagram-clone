@@ -14,7 +14,7 @@
         
      }; 
      return (
-         <div className="container grid grid-cols-12">
+         <div className="grid grid-cols-12">
              <Post post={post} />
          </div>
      ); 
