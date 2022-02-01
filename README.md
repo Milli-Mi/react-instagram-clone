@@ -1,3 +1,3 @@
 # react-instagram-clone
  
-//https://youtu.be/7FTfFsk4nWU 
+//https://www.youtube.com/watch?v=7FTfFsk4nWU 2.24

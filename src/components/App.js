@@ -9,9 +9,47 @@
      const post = {
          src: images,
          caption: 'cat smuxzi',
-         username: "Milli",
-         profileSrc: profileImg
-        
+         username: 'Milli',
+         profileSrc: profileImg,
+         likes: 387,
+         comments: [
+             {
+                 text: 'cute cats with blue eyes',
+                 username: 'happy - dog',
+             },
+             {
+                 text: 'his eyes are perfectly contoured, almost like he’s wearing eyeliner',
+                 username: 'Dark_you',
+             },
+             {
+                 text: 'He’s definitely one handsome fella.',
+                 username: 'Jecky',
+             },
+             {
+                 text: 'cute cats with blue eyes',
+                 username: 'happy - dog',
+             },
+             {
+                 text: 'his eyes are perfectly contoured, almost like he’s wearing eyeliner',
+                 username: 'Dark_you',
+             },
+             {
+                 text: 'He’s definitely one handsome fella.',
+                 username: 'Jecky',
+             },
+             {
+                 text: 'cute cats with blue eyes',
+                 username: 'happy - dog',
+             },
+             {
+                 text: 'his eyes are perfectly contoured, almost like he’s wearing eyeliner',
+                 username: 'Dark_you',
+             },
+             {
+                 text: 'He’s definitely one handsome fella.',
+                 username: 'Jecky',
+             },
+         ],
      }; 
      return (
          <div className="grid grid-cols-12">
