@@ -2,6 +2,7 @@
  import Post from './Post'
  import images from '../images/kot-cobi.jpg'
  import profileImg from '../images/profile.jpg'
+ import './app.css'
  
  
  export default class App extends Component {
