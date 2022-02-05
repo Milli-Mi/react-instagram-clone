@@ -17,6 +17,7 @@ export default class Comments extends Component {
             commentsSlice: commentsSlice + COMMENTS_MIN_COUNT,
         });
     };
+   
 
     render() {
         const { comments } = this.props;
@@ -37,7 +38,7 @@ export default class Comments extends Component {
                     commentsSlice < comments.length && (
                         <button
                             type='button'
-                            className='cursor-pointer text-gray-400'
+                            className='cursor-pointer text-gray-400 mb-2'
                             onClick={this.handlerViewMoreComments}
                         >
                             Vew all comments
