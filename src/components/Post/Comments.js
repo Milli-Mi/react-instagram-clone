@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddCommentForm from './AddCommentForm';
 
 const COMMENTS_MIN_COUNT = 3;
 
@@ -24,7 +25,7 @@ export default class Comments extends Component {
             <div className='pl-4'>
                 {comments.slice(0, commentsSlice).map((comment) => (
                     <p className='mb-1'>
-                        <a href='#'>
+                        <a href='/#'>
                             <span className='mr-1 font-bold'>
                                 {comment.username}
                             </span>
@@ -32,15 +33,17 @@ export default class Comments extends Component {
                         <span>{comment.text}</span>
                     </p>
                 ))}
-                {comments.length > 3 && commentsSlice < comments.length && (
-                    <button
-                        type='button'
-                        className='cursor-pointer text-gray-400'
-                        onClick={this.handlerViewMoreComments}
-                    >
-                        Vew all comments
-                    </button>
-                )}
+                {comments.length > COMMENTS_MIN_COUNT &&
+                    commentsSlice < comments.length && (
+                        <button
+                            type='button'
+                            className='cursor-pointer text-gray-400'
+                            onClick={this.handlerViewMoreComments}
+                        >
+                            Vew all comments
+                        </button>
+                    )}
+                    <AddCommentForm />
             </div>
         );
     }

@@ -4,7 +4,7 @@ export default function Header({username, profileSrc}) {
      
     return (
         <div className="p-4">
-            <a href='#' className='flex items-center'>
+            <a href='/#' className='flex items-center'>
                 <img
                     src={profileSrc}
                     alt={username}
