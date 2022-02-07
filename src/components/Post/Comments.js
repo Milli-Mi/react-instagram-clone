@@ -20,7 +20,7 @@ export default class Comments extends Component {
    
 
     render() {
-        const { comments } = this.props;
+        const { comments, commentInput } = this.props;
         const { commentsSlice } = this.state;
         return (
             <div className='pl-4'>
@@ -44,7 +44,7 @@ export default class Comments extends Component {
                             Vew all comments
                         </button>
                     )}
-                    <AddCommentForm />
+                    <AddCommentForm commentInput = {commentInput}/>
             </div>
         );
     }

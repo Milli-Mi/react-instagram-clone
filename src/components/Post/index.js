@@ -5,13 +5,18 @@ import Actions from './Actions';
 import Caption from './Caption';
 import Comments from './Comments';
 
-handleCommentClick = () => {};
+
 
 export default class Post extends Component {
     constructor(props) {
         super(props);
         this.commentInputRef = React.createRef();
     }
+    
+    handleCommentClick = () => {
+        this.commentInputRef.current.focus();
+    };
+
     render() {
         const { post } = this.props;
         return (
@@ -23,10 +28,11 @@ export default class Post extends Component {
                     onCommentClick={this.handleCommentClick}
                 />
                 <Caption caption={post.caption} username={post.username} />
-                <Comments 
-                comments={post.comments} 
-                username={post.username} 
-                commentInput={this.commentInputRef} />
+                <Comments
+                    comments={post.comments}
+                    username={post.username}
+                    commentInput={this.commentInputRef}
+                />
             </div>
         );
     }
