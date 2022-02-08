@@ -10,6 +10,11 @@ export default class AddCommentForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+          const { comment } = this.state;
+          if (!comment.trim()) {
+              return;
+          }
+          alert(comment);
     };
 
 handleCommentChange = (e) => {
@@ -35,8 +40,9 @@ handleCommentChange = (e) => {
                 />
 
                 <button
-                    className='pr-4 text-sm text-blue-400 font-bold'
+                    className={`pr-4 text-sm text-blue-400 font-bold ${!comment.trim() ? 'opacity-25' : ''}`}
                     type='submit'
+                    disabled = {!comment.trim()}
                 >
                     Submit
                 </button>
