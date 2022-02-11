@@ -1,4 +1,5 @@
 import React  from 'react';
+import PropTypes from 'prop-types';
 
 export default function Image({src, caption}) {
    
@@ -11,3 +12,12 @@ export default function Image({src, caption}) {
     );
   
 };
+
+Image.defaultProps = {
+    caption: 'No caption',
+}
+
+Image.propTypes = {
+    src: PropTypes.string.isRequired,
+    caption: PropTypes.string
+}
