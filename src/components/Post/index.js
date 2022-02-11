@@ -4,15 +4,14 @@ import Header from './Header';
 import Actions from './Actions';
 import Caption from './Caption';
 import Comments from './Comments';
-
-
+import PropTypes from 'prop-types';
 
 export default class Post extends Component {
     constructor(props) {
         super(props);
         this.commentInputRef = React.createRef();
     }
-    
+
     handleCommentClick = () => {
         this.commentInputRef.current.focus();
     };
@@ -37,3 +36,19 @@ export default class Post extends Component {
         );
     }
 }
+
+Post.propTypes = {
+    post: PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        profileSrc: PropTypes.string.isRequired,
+        src: PropTypes.string.isRequired,
+        caption: PropTypes.string,
+        likes: PropTypes.number.isRequired,
+        comments: PropTypes.arrayOf(
+            PropTypes.shape({
+                username: PropTypes.string.isRequired,
+                text: PropTypes.string.isRequired,
+            })
+        ).isRequired,
+    }).isRequired,
+};

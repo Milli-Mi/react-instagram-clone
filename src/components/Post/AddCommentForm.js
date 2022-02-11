@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class AddCommentForm extends Component {
     constructor(props) {
@@ -53,4 +54,8 @@ handleCommentChange = (e) => {
             </form>
         );
     }
+}
+
+AddCommentForm.propTypes = {
+    commentInput: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddCommentForm from './AddCommentForm';
+import PropTypes from 'prop-types';
 
 const COMMENTS_MIN_COUNT = 3;
 
@@ -17,7 +18,6 @@ export default class Comments extends Component {
             commentsSlice: commentsSlice + COMMENTS_MIN_COUNT,
         });
     };
-   
 
     render() {
         const { comments, commentInput } = this.props;
@@ -44,8 +44,18 @@ export default class Comments extends Component {
                             Vew all comments
                         </button>
                     )}
-                    <AddCommentForm commentInput = {commentInput}/>
+                <AddCommentForm commentInput={commentInput} />
             </div>
         );
     }
 }
+
+Comments.propTypes = {
+    commentInput: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string.isRequired,
+            text: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};

@@ -3,6 +3,7 @@ import { ReactComponent as Like } from '../../icons/heart.svg'
 import { ReactComponent as Comment } from '../../icons/comment.svg';
 import { ReactComponent as Send } from '../../icons/send.svg';
 import { ReactComponent as Bookmark } from '../../icons/bookmark.svg';
+import PropTypes from 'prop-types';
 
 export default class Actions extends Component {
    
@@ -28,4 +29,11 @@ export default class Actions extends Component {
         </div>
     );
   }
+}
+
+
+Actions.propTypes = {
+    likes: PropTypes.number.isRequired,
+    onCommentClick: PropTypes.func.isRequired,
+
 }
