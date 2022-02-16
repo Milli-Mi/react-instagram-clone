@@ -17,7 +17,7 @@ export default class Post extends Component {
     };
 
     render() {
-        const { post } = this.props;
+        const { post, onAddComment } = this.props;
         return (
             <div className='border rounded border-gray-200 col-start-4 col-end-10'>
                 <Header username={post.username} profileSrc={post.profileSrc} />
@@ -31,6 +31,7 @@ export default class Post extends Component {
                     comments={post.comments}
                     username={post.username}
                     commentInput={this.commentInputRef}
+                    onAddComment={onAddComment}
                 />
             </div>
         );
@@ -51,4 +52,5 @@ Post.propTypes = {
             })
         ).isRequired,
     }).isRequired,
-};
+    onAddComment: PropTypes.func.isRequired
+}; 

@@ -12,10 +12,11 @@ export default class AddCommentForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
           const { comment } = this.state;
+          const { onSubmit } = this.props;
           if (!comment.trim()) {
               return;
           }
-          alert(comment);
+          onSubmit(comment);
     };
 
 handleCommentChange = (e) => {
@@ -57,5 +58,6 @@ handleCommentChange = (e) => {
 }
 
 AddCommentForm.propTypes = {
-    commentInput: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    commentInput: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+    onSubmit: PropTypes.func.isRequired
 }

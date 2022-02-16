@@ -70,7 +70,7 @@ export default class App extends Component {
          const { post } = this.state;
         return (
             <div className='grid grid-cols-12'>
-                <Post post={post} />
+                <Post post={post} onAddComment={this.handleAddComment} />
             </div>
         );
     }
