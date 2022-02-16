@@ -9,6 +9,12 @@ export default class AddCommentForm extends Component {
         };
     }
 
+    clearCommentForm = () => {
+        this.setState({ 
+            comment: '' 
+        });
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
           const { comment } = this.state;
@@ -17,6 +23,7 @@ export default class AddCommentForm extends Component {
               return;
           }
           onSubmit(comment);
+          this.clearCommentForm()
     };
 
 handleCommentChange = (e) => {
