@@ -8,6 +8,7 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            currentUser: {username: 'Milli'},
             post: {
                 src: images,
                 caption: 'cat smuxzi',
@@ -67,10 +68,10 @@ export default class App extends Component {
     };
 
     render() {
-         const { post } = this.state;
+         const { post, currentUser } = this.state;
         return (
             <div className='grid grid-cols-12'>
-                <Post post={post} onAddComment={this.handleAddComment} />
+                <Post post={post} onAddComment={this.handleAddComment} currentUser={currentUser}/>
             </div>
         );
     }
