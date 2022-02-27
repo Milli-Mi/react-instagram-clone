@@ -75,9 +75,9 @@ export default class App extends Component {
       <Router>
         <div className='grid grid-cols-12'>
           <Routes>
-            <Route path='/p/:username' element={<Profile />} />
+            <Route path="/p/:username" element={<Profile />} />
             <Route
-              path='/p/:username/:postId'
+              path="/p/:username/:postId"
               element={
                 <Post
                   post={post}
@@ -89,6 +89,6 @@ export default class App extends Component {
           </Routes>
         </div>
       </Router>
-    )
+    );
   }
 }
