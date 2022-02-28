@@ -5,12 +5,25 @@ import profileImg from '../images/profile.jpg'
 import './app.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Profile from './Profile'
+ 
+ 
 
 export default class App extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
+
       currentUser: { username: 'Milli' },
+      user: {
+        username: 'Milli',
+        profileSrc: profileImg,
+        fullName: 'Milli-Mi',
+        postCount: 10,
+        followerCount: 148,
+        followingCount: 1,
+
+      },
       post: {
         src: images,
         caption: 'cat smuxzi',
@@ -70,12 +83,12 @@ export default class App extends Component {
   }
 
   render() {
-    const { post, currentUser } = this.state
+    const { post, currentUser, user } = this.state;
     return (
       <Router>
         <div className='grid grid-cols-12'>
           <Routes>
-            <Route path="/p/:username" element={<Profile />} />
+            <Route path="/p/:username" element={<Profile user = {user} />} />
             <Route
               path="/p/:username/:postId"
               element={
